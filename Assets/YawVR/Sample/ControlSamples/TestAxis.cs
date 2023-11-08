@@ -100,7 +100,7 @@ public class TestAxis : MonoBehaviour
             Vector3 rotation = new Vector3(0f, 0f, 0f);
             rotation[axis] = currentAngle;
             yawController.TrackerObject.SetRotation(rotation);
-            fileOut.WriteLine((stepCount * timeIncrement).ToString() + "," + currentAngle.ToString() + "," + (axis == 0 ? yawController.Device.ActualPosition.pitch : (axis == 1 ? yawController.Device.ActualPosition.yaw : yawController.Device.ActualPosition.roll)).ToString());
+            fileOut.WriteLine((stepCount * timeIncrement).ToString() + ";" + currentAngle.ToString() + ";" + (axis == 0 ? yawController.Device.ActualPosition.pitch : (axis == 1 ? yawController.Device.ActualPosition.yaw : yawController.Device.ActualPosition.roll)).ToString());
             stepCount++;
         }
         fileOut.Close();
